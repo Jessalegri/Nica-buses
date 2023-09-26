@@ -165,49 +165,47 @@ header{
     justify-content: center;
   }
 
-/* Servicio */
-.subtitulo{
-    text-align: center;
-    font-weight: 300;
-    color: #9f8ad0;
-    margin-bottom: 40px;
-    font-size: 40px;
-}
-
-.contenedor-servicio{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.contenedor-servicio img{
-    width: 50%;
-}
-
-.checklist-servicio{
-    width: 45%;
-}
-
-.service{
-    margin-bottom: 20px;
-}
-
-.n-service{
-    margin-bottom: 7px;
-    color: #9f8ad0;
-}
-
-.number{
-    display: inline-block;
-    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
-    width: 30px;
-    height: 30px;
-    color:#fff;
-    text-align: center;
-    border-radius: 70%;
-    margin-right: 5px;
-}
+/*  Cómo funciona NicaBus: */
+    .subtitulo{
+        text-align: center;
+        font-weight: 300;
+        color: #9f8ad0;
+        margin-bottom: 40px;
+        font-size: 40px;
+    }
+    .texto-centrado {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 130%;
+    }
+    .contenedor-servicio {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .service {
+        width: 45%; 
+        margin-bottom: 20px;
+        display: flex; 
+        align-items: center;
+    }
+    
+    /* Estilo para el ícono de cada servicio */
+    .icono-servicio {
+        padding: 15px;
+        border-radius: 15px;
+        margin-right: 15px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Inicio de iconos en Segunda seccion del programa */
+    .icono-servicio.morado {
+        background-color: #7b4d8b;  /* Morado oscuro intermedio */
+        border: 7px solid #d6c6ff;  /* Borde en morado claro de 5px */
+    }
 
 .gallery{
     background: #f2f2f2;
@@ -267,32 +265,7 @@ header{
     cursor: pointer;
 }
 
-.experts{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-}
 
-.cont-expert{
-    width: 30%;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.cont-expert img{
-    width: 80%;
-    display: block;
-    margin: 0 auto;
-}
-
-.n-expert{
-    display: inline-block;
-    margin-top: 20px;
-    width: 100%;
-    font-weight: 400;
-    font-family: sans-serif;
-}
 /* representar la sección de pie de página */
 .footer{
     background: #9f8ad0;
@@ -395,7 +368,6 @@ header{
   }
 
 
-
     /* Titulo */
 
     .titulo{
@@ -490,96 +462,3 @@ header{
       }
 }
 
-@media screen and (max-width: 500px){
-    /* Menu de navegacion */
-    .menu-navegacion{
-        width: 150px;
-    }
-
-    /* Header */
-    header {
-        height: auto; /* Altura automática para ajustar al contenido */
-      }
-
-    /* Logo adaptable movil */
-    .logo-container img {
-        width: 300px;
-        top: 0;
-    }
-
-    .logo-container {
-        justify-content: flex-start;
-        padding: 10px;
-    }
-
-    .menu{
-        top: 20px;
-        right: 20px;
-    }
-
-    h1.titulo {
-        font-size: 24px; /* Tamaño de fuente para h1 en dispositivos móviles */
-        margin-bottom: 5px; /* Ajustar el espacio inferior */
-      }
-
-      h2 {
-        font-size: 14px; /* Tamaño de fuente para h2 en dispositivos móviles */
-        margin-bottom: px; /* Ajustar el espacio inferior */
-      }
-
-    .subtitulo{
-        font-size: 30px;
-    }
-
-    .agregar-imagen{
-        width: 95%;
-    }
-
-    .img-galeria{
-        width: 95%;
-    }
-
-    .social-media{
-        width: 100%;
-    }
-
-    .contact-us{
-        width: 90%;
-    }
-
-    .contenedor.head{
-        padding: 10px 5px;
-    }
-
-    .search-form {
-        flex-direction: column; /* Cambiar a disposición vertical en dispositivos móviles */
-        gap: 10px; /* Agregar espacio entre los elementos en dispositivos móviles */
-        padding: 10px; /* Reducir el espacio de relleno en dispositivos móviles */
-        overflow-wrap: break-word;
-        align-items: center;
-    }
-
-      .search-form label {
-        display: none; /* Tamaño de fuente para etiquetas en dispositivos móviles */
-      }
-
-      .search-form input,
-      .search-form button {
-        width: 100%; /* Asegurar que los campos ocupen todo el ancho disponible */
-        font-size: 14px;
-    }
-
-      .search-form button {
-        margin-top: 10px; /* Ajustar el espacio entre el campo de búsqueda y el botón */
-        padding: 8px 12px; /* Tamaño de padding en dispositivos móviles */
-        font-size: 14px;
-      }
-
-      /* Estilos para las columnas en el formulario */
-      .search-form .column {
-        width: 100%; /* Las columnas ocupan todo el ancho del formulario */
-        display: flex;
-        flex-direction: column;
-        gap: 5px; /* Espacio entre las columnas */
-      }
-}
