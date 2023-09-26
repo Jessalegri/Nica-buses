@@ -211,15 +211,6 @@ header{
         border: 7px solid #ffdab9;  /* Borde en naranja claro */
     }
     
-    .icono-servicio.celeste {
-        background-color: #16B5F1;  /* Celeste intermedio (no tan claro como antes, pero tampoco tan oscuro) */
-        border: 7px solid #B2E4FA;  /* Borde en celeste oscuro intermedio */
-    }
-    
-    .icono-servicio.verde {
-        background-color: #9AAF37;  /* Verde turquesa verdoso */
-        border: 7px solid #CEE2CA;  /* Borde en verde turquesa claro */
-    }
 
     /* Galeria de departamentos  */
     .gallery{
