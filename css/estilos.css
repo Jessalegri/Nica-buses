@@ -356,3 +356,57 @@ footer{
     background: #fff;
     margin-bottom: 60px;
 }
+
+/* Responsito - Móviles: Hasta 768px*/
+@media screen and (max-width:768px) {
+    /* Logo NicaBus */
+    .logo-container {
+        padding-left: 5px;
+        align-items: center;
+    }
+    .logo-container img {
+        width: 80%;       /* Se mantiene el ancho reducido */
+        margin-left: 2%;  /* Se mantiene el margen izquierdo reducido */
+        top: 20px;
+    }
+    /* H1 - H2 en Homepage*/
+    .contenedor.head h1 {
+        font-size: 30px; /* Se reduce el tamaño del h1 a 30px. */
+    }
+
+    .contenedor.head h2 {
+        font-size: 20px; /* Se reduce el tamaño del h2 a 20px. */
+    }
+    /* Seccion de iconos - NicaBus*/
+    .service {
+        width: 100%; /* Ocupará el 100% del ancho */
+        margin-bottom: 10px;
+    }
+
+    .subtitulo {
+        font-size: 30px;
+    }
+    /* Formulario de busqueda */
+    .search-form {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px; /* Reducir padding */
+      }
+
+      /* Ajuste de tamaño de fuente y margen */
+      .search-form label {
+        font-size: 18px; /* Reducción del tamaño de la fuente */
+        margin-bottom: 10px; /* Espacio entre la etiqueta y el input */
+      }
+
+      .search-form input {
+        font-size: 18px; /* Reducción del tamaño de la fuente */
+        width: 100%; /* Utiliza todo el ancho disponible */
+        margin-bottom: 15px; /* Espacio entre el input y el botón */
+      }
+
+      .search-form button {
+        align-self: center; /* Asegura que el botón esté centrado */
+        width: auto;
+      }
+}
