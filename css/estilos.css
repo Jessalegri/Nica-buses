@@ -206,8 +206,23 @@ header{
         background-color: #7b4d8b;  /* Morado oscuro intermedio */
         border: 7px solid #d6c6ff;  /* Borde en morado claro de 5px */
     }
+    .icono-servicio.naranja {
+        background-color: #ff8c00;  /* Naranja oscuro intermedio */
+        border: 7px solid #ffdab9;  /* Borde en naranja claro */
+    }
+    
+    .icono-servicio.celeste {
+        background-color: #16B5F1;  /* Celeste intermedio (no tan claro como antes, pero tampoco tan oscuro) */
+        border: 7px solid #B2E4FA;  /* Borde en celeste oscuro intermedio */
+    }
+    
+    .icono-servicio.verde {
+        background-color: #9AAF37;  /* Verde turquesa verdoso */
+        border: 7px solid #CEE2CA;  /* Borde en verde turquesa claro */
+    }
 
-.gallery{
+    /* Galeria de departamentos  */
+    .gallery{
     background: #f2f2f2;
 }
 
