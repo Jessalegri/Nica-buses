@@ -54,6 +54,14 @@ header{
     flex-direction: column;
     color: #fff;
 }
+ /* Añade margen a la izquierda */
+ .contenedor.head h1 {
+    margin-bottom: 20px; /* Ajusta este valor según tus necesidades */
+}
+
+.contenedor.head h2 {
+    margin-bottom: 20px; /* Ajusta este valor según tus necesidades */
+}
 
 .menu{
     position: fixed;
