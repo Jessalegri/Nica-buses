@@ -203,13 +203,23 @@ header{
     
     /* Inicio de iconos en Segunda seccion del programa */
     .icono-servicio.morado {
-        background-color: #7b4d8b;  /* Morado oscuro intermedio */
-        border: 7px solid #d6c6ff;  /* Borde en morado claro de 5px */
+        background-color: #7b4d8b;
+        border: 7px solid #d6c6ff; 
+    }
+
+    .icono-servicio.naranja {
+        background-color: #ff8c00; 
+        border: 7px solid #ffdab9; 
+    }
+
+    icono-servicio.celeste {
+        background-color: #16B5F1; 
+        border: 7px solid #B2E4FA; 
     }
     
-    .icono-servicio.naranja {
-        background-color: #ff8c00;  /* Naranja oscuro intermedio */
-        border: 7px solid #ffdab9;  /* Borde en naranja claro */
+    .icono-servicio.verde {
+        background-color: #9AAF37;  /* Verde turquesa verdoso */
+        border: 7px solid #CEE2CA;  /* Borde en verde turquesa claro */
     }
     
 
