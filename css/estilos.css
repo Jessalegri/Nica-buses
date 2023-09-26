@@ -23,8 +23,7 @@
     margin-left: 25px; /* Añade margen a la izquierda */
 }
 .body{
-    font-family: 'Coming Soon', cursive;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 .contenedor{
@@ -44,17 +43,20 @@ header{
         background-position: center;
     }
 
-.head{
-    text-align: center;
-    padding: 0%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: #fff;
-}
- /* Añade margen a la izquierda */
+    /* Esto es el logo NicaBus */
+    .head{
+        text-align: center;
+        padding: 0%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #fff;
+    }
+
+
+ /* H1 - H2*/
  .contenedor.head h1 {
     margin-bottom: 20px; /* Ajusta este valor según tus necesidades */
 }
@@ -163,7 +165,6 @@ header{
     font-size: 24px; /* Aumentado el tamaño de la fuente */
     cursor: pointer;
     background-image: linear-gradient(to right, #2b1f51, #443570, #653c8f, #9857b6, #d194e3);
-    /* Los colores van desde un azul oscuro (#2b1f51) hasta un morado claro (#d194e3) */
     border: none;
     color: white;
     border-radius: 15px; /* Ajustado a 15px para mayor redondez */
@@ -231,7 +232,7 @@ header{
     }
     
 
-    /* Galeria de departamentos  */
+/* Galeria de departamentos  */
     .gallery{
     background: #f2f2f2;
 }
@@ -292,7 +293,7 @@ header{
 
 
 /* representar la sección de pie de página */
-.footer{
+footer{
     background: #9f8ad0;
     padding-bottom: 0.1px;
 }
