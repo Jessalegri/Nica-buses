@@ -6,7 +6,6 @@
         <title>NicaBus</title>
         <link rel="stylesheet" href="css/estilos.css">
         <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
@@ -20,21 +19,21 @@
             <img src="img/menu.png" alt="" class="menu">
             <nav class="menu-navegacion">
                 <a href="#inicio">Inicio</a>
-                <a href="#terminales">Terminales</a>
+                <a href="#nicabus">NicaBus</a>
                 <a href="#horario">Horario</a>
                 <a href="#departamentos">Departamentos</a>
             </nav>
 
             <div class="contenedor head">
-                <h1 class="titulo">Horario y terminales de buses en Nicaragua</h1> <br>
-                <h2>Busca tu ciudad de destino:</h2> <br>
+    <h1 class="titulo">Horario y terminales de buses en Nicaragua</h1>
+    <h2>Busca tu ciudad de destino:</h2>
 
 
             <!-- Tabla de búsqueda -->
             <form class="search-form" action="/ruta-de-busqueda" method="get">
-                <label for="origen">Origen</label>
+                <label for="origen">Origen:</label>
                 <input type="text" id="origen" name="origen" required placeholder="Ciudad de origen">
-                <label for="destino">Destino</label>
+                <label for="destino">Destino:</label>
                 <input type="text" id="destino" name="destino" required placeholder="Ciudad de destino">
                 <button type="submit" id="buscar">Buscar</button>
               </form>
@@ -42,71 +41,63 @@
 
         </header>
 
+<!-- Contenido principal -->
+<main>
+    <!-- Sección de cómo funciona NicaBus -->
+    <section class="contenedor" id="nicabus">
+        <h2 class="subtitulo">Cómo funciona NicaBus:</h2>
+        <p class="texto-centrado">NicaBus busca horario de buses y terminales en distintas ciudades, municipios y departamentos en Nicaragua.</p>
 
-        <!-- Contenido principal -->
-        <main>
-            <section class="contenedor" id="terminales">    <!-- redireccion a seccion terminales-->
-                <h2 class="subtitulo">Nuestro servicio</h2>
-                <div class="contenedor-servicio">
-                    <img src="img/travel.svg" alt="">
-                    <div class="checklist-servicio">
-                        <div class="service">
-                            <h3 class="n-service"><span class="number">1</span> NicaBus - ¡Viaja con vos!</h3>
-                            <p class="texto"> NicaBus es un sitio web interactivo donde los usuarios encuentran, optimizan y brindan opinion en tiempo real
-                              acerca de terminales y horarios de buses en los distintos departamentos y municipios de Nicaragua.</p>
-                        </div>
-                        <div class="service">
-                            <h3 class="n-service"><span class="number">2</span>Encuentra - agrega una terminal</h3>
-                            <p class="textp"> Encuentra las diversas terminales clasisifcadas por departamentos y municipios
-                                a nivel nacional del pais.
-                                Si la terminal aun no ha sido registrada, comparte con la comunidad de NicaBus en la seccion de "agregar terminal".
-                                Tu aporte ayudara a seguir recolectando informacion en tiempo real.
-                 </p>
-                        </div>
-                        <div class="service">
-                            <h3 class="n-service"><span class="number">3</span>Diseño web</h3>
-                            <p class="texto"> Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                Aspernatur ex impedit, incidunt cupiditate sint sequi eius. Ipsum, nostrum necessitatibus.
-                                Inventore officia voluptatum tempora nesciunt labore assumenda nulla voluptates tenetur fuga.</p>
-                        </div>
-                    </div>
+        <div class="contenedor-servicio">
+            <!-- Encuentra horarios de buses -->
+            <div class="service">
+                <div class="icono-servicio morado">
+                    <img src="img/buses.png" alt="Icono de bus para encontrar un NicaBus">
                 </div>
-            </section>
-            <section class="gallery" id="departamentos">
-                <div class="contenedor">
-                    <h2 class="subtitulo">Departamentos</h2>
-                    <div class="contenedor-galeria">
-                        <img src="img/granada.jpg" alt="" class="img-galeria">
-                        <img src="img/leon.jpg" alt="" class="img-galeria">
-                        <img src="img/granada.jpg" alt="" class="img-galeria">
-                        <img src="img/granada.jpg" alt="" class="img-galeria">
-                        <img src="img/granada.jpg" alt="" class="img-galeria">
-                         <img src="img/granada.jpg" alt="" class="img-galeria">
-                    </div>
+                <h3 class="n-service">Encuentra horarios de buses</h3>
+            </div>
+
+            <!-- Agrega nuevas rutas de horario de buses -->
+            <div class="service">
+                <div class="icono-servicio naranja">
+                    <img src="img/add.png" alt="Icono de agregar horarios de buses">
                 </div>
-            </section>
-            <section class="imagen-light">
-                <img src="img/cerrar.svg" alt="" class="close">
-                <img src="img/bus.jpg" alt="" class="agregar-imagen">
-            </section>
-            <section class="contenedor" id="expertos">
-                <h2 class="subtitulo">Expertos en:</h2>
-                <section class="experts">
-                    <div class="cont-expert">
-                        <img src="img/viaje.svg" alt="">
-                        <h3 class="n-expert">Analytics</h3>
-                    </div>
-                    <div class="cont-expert">
-                        <img src="img/relax.svg" alt="">
-                        <h3 class="n-expert">Analytics</h3>
-                    </div>
-                    <div class="cont-expert">
-                        <img src="img/turismo.svg" alt="">
-                        <h3 class="n-expert">Analytics</h3>
-                    </div>
-                </section>
-            </section>
-        </main>
+                <h3 class="n-service">Agrega nuevos horarios de buses</h3>
+            </div>
+
+            <!-- Tercer servicio -->
+            <div class="service">
+                <div class="icono-servicio celeste">
+                    <img src="img/mapa.png" alt="Icono de mapa para encontrar terminales de buses">
+                </div>
+                <h3 class="n-service">Encuentra terminales de buses</h3>
+            </div>
+
+            <!-- Cuarto servicio -->
+            <div class="service">
+                <div class="icono-servicio verde">
+                    <img src="img/evalua.png" alt="Icono para evaluar los horarios en NicaBus">
+                </div>
+                <h3 class="n-service">Califica horarios de buses en NicaBus</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de departamentos -->
+    <section class="gallery" id="departamentos">
+        <div class="contenedor">
+            <h2 class="subtitulo">Departamentos</h2>
+            <div class="contenedor-galeria">
+                <img src="img/granada.jpg" alt="Imagen de Granada" class="img-galeria">
+                <img src="img/leon.jpg" alt="Imagen de León" class="img-galeria">
+                <img src="img/granada.jpg" alt="Imagen de Granada" class="img-galeria">
+                <img src="img/granada.jpg" alt="Imagen de Granada" class="img-galeria">
+                <img src="img/granada.jpg" alt="Imagen de Granada" class="img-galeria">
+                <img src="img/granada.jpg" alt="Imagen de Granada" class="img-galeria">
+            </div>
+        </div>
+    </section>
+</main>
         <footer id="contacto">
             <div class="contenedor footer-content">
                 <div class="contact-us">
@@ -115,13 +106,13 @@
                 </div>
                 <div class="social-media">
                     <a href="./" class="social-media-icon">
-                        <i class='bx bxl-facebook'></i>
+                        <img src="img/fb.png" alt="Facebook Icon">
                     </a>
                     <a href="./" class="social-media-icon">
-                        <i class='bx bxl-twitter'></i>
+                        <img src="img/ig.png" alt="Twitter Icon">
                     </a>
                     <a href="./" class="social-media-icon">
-                        <i class='bx bxl-instagram'></i>
+                        <img src="img/github.png" alt="Instagram Icon">
                     </a>
                 </div>
             </div>
