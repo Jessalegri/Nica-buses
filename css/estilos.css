@@ -409,4 +409,73 @@ footer{
         align-self: center; /* Asegura que el botón esté centrado */
         width: auto;
       }
+
+    /* Responsito - Tablets: 769px y 1024px */
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+
+        .contenedor.head h1 {
+            font-size: 30px; /* Se reduce el tamaño del h1 en un 10% respecto al tamaño original */
+        }
+    
+        .contenedor.head h2 {
+            font-size: 30px; /* Se reduce el tamaño del h2 en un 10% respecto al tamaño original */
+        }
+    
+        .service {
+            width: 50%;
+            margin-bottom: 15px;
+        }
+    
+        .subtitulo {
+            font-size: 35px;
+        }
+    
+        .texto-centrado {
+            font-size: 115%;  /* Adaptamos el tamaño del texto para tablets */
+        }
+    
+    /* H1 - H2 en Homepage */
+    
+        .contenedor.head h1 {
+            font-size: 50px; /* Se reduce el tamaño del h1 a 30px. */
+        }
+    
+        .contenedor.head h2 {
+            font-size: 25px; /* Se reduce el tamaño del h2 a 20px. */
+        }
+    
+    /* Adaptamos el tamaño del texto para tablets */
+        .search-form {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 3%;
+            border: 5px solid #7b4d8b;
+            border-radius: 15px;
+        }
+    
+        /*  Texto "origen" "destino" */
+        .search-form label {
+            font-size: 24px;
+        }
+        .search-form input {
+            font-size: 1.1em;
+            width: 60%;
+            font-size: 1.2em;
+            margin-bottom: 0;
+            display: inline-block;
+            padding: 10px;
+        }
+    
+        .search-form input:first-of-type {
+            margin-right: 4%;
+        }
+    
+        .search-form button {
+            width: auto;
+            padding: 2% 4%;  /* Un aproximado para que el padding sea proporcional, puedes ajustar según necesidad */
+            font-size: 1.5em;  /* Esto hará que el tamaño de la fuente sea 1.5 veces el tamaño heredado */
+            margin-left: 2%;  /* Aproximado para el margen izquierdo */
+        } 
+}
 }
