@@ -15,6 +15,8 @@ const db = new sqlite3.Database('./nicabus.sql.db', (err) => {
     console.log('Conexión establecida con la base de datos.');
 });
 
+// archivos estaticos desde carpeta 'public'
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.send('¡Bienvenido a NicaBus!');
