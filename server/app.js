@@ -1,14 +1,28 @@
-// app.js = nucleo del servidor (servidor backend), donde le dices al servidor que hacer cuando recibe peticiones
-// node.js = entorno de ejecucion de JS que ejecuta codigo JS fuera del navegador (Google) en el lado del servidor
-// express = marco de trabajo (framework) facilita la creacion de app web.
-
 // Configuracion inicial = express 
-const express = require('express');                 // importando Express
-const app = express();                              // inicializacion de app web
+const express = require('express');
+const sqlite3 = require('sqlite3');
 
-const PORT = 3000;
+const app = express();
+const PORT = 3001;
+
+// Establecemos la conexión con la base de datos SQLite3
+const db = new sqlite3.Database('./nicabus.sql.db', (err) => {
+    if (err) {
+        // Si hay un error durante la conexión, se muestra
+        console.error('Error conectando a la base de datos: ', err);
+        return;
+    }
+    console.log('Conexión establecida con la base de datos.');
+});
+
+
+app.get('/', (req, res) => {
+    res.send('¡Bienvenido a NicaBus!');
+});
+
 
 app.listen(PORT, () => {
     console.log(`El servidor está corriendo en http://localhost:${PORT}`);
-}); // Inicia el servidor en el puerto 3000.
+});
+
 
