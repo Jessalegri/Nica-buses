@@ -16,7 +16,7 @@ const db = new sqlite3.Database('./nicabus.sql.db', (err) => {
 });
 
 // archivos estaticos desde carpeta 'public'
-app.use(express.static('public'));
+app.use(express.static('../public'));
 
 app.get('/', (req, res) => {
     res.send('¡Bienvenido a NicaBus!');
