@@ -15,11 +15,43 @@ const db = new sqlite3.Database('./nicabus.sql.db', (err) => {
     console.log('Conexión establecida con la base de datos.');
 });
 
-// archivos estaticos desde carpeta 'public'
+// archivos estaticos desde carpeta 'public'    / conexion frontend * backend
 app.use(express.static('../public'));
 
-app.get('/', (req, res) => {
-    res.send('¡Bienvenido a NicaBus!');
+// configutacion de las rutas para 'query' consultas de la base de datos
+app.get('/buscar', (req, res) => {
+    const origen = req.query.origen;
+    const destino = req.query.destino;
+
+    const sql = `
+        SELECT 
+            origen_terminal.terminal AS terminal_origen,
+            destino_terminal.terminal AS terminal_destino,
+            horario.hora_salida,
+            horario.duracion_de_viaje,
+            COALESCE(calif.calificacion, 'No calificado') AS calificacion
+        FROM 
+            HorariosDeBuses AS horario
+        JOIN 
+            Terminales AS origen_terminal ON horario.terminal_origen_id = origen_terminal.id
+        JOIN 
+            Terminales AS destino_terminal ON horario.terminal_destino_id = destino_terminal.id
+        JOIN 
+            Ciudades AS origen_ciudad ON origen_terminal.ciudad_id = origen_ciudad.id
+        JOIN 
+            Ciudades AS destino_ciudad ON destino_terminal.ciudad_id = destino_ciudad.id
+        LEFT JOIN 
+            Calificaciones AS calif ON horario.id = calif.horario_id
+        WHERE 
+            origen_ciudad.nombre = ? AND destino_ciudad.nombre = ?`;
+
+    db.all(sql, [origen, destino], (err, rows) => {
+        if (err) {
+            res.status(500).json({ error: err.message });
+            return;
+        }
+        res.json(rows);
+    });
 });
 
 
