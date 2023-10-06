@@ -27,4 +27,3 @@ app.listen(PORT, () => {
     console.log(`El servidor está corriendo en http://localhost:${PORT}`);
 });
 
-
