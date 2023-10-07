@@ -6,7 +6,7 @@ const app = express();
 const PORT = 3001;
 
 // Establecemos la conexión con la base de datos SQLite3
-const db = new sqlite3.Database('.dataBase.db', (err) => {
+const db = new sqlite3.Database('../dataBase.db', (err) => { // Ajusta la ruta
     if (err) {
         // Si hay un error durante la conexión, se muestra
         console.error('Error conectando a la base de datos: ', err);
@@ -43,7 +43,7 @@ app.get('/buscar', (req, res) => {
     LEFT JOIN 
         Calificaciones AS calif ON horario.id = calif.horario_id
     WHERE 
-        origen_ciudad.nombre = 'Managua' AND destino_ciudad.nombre = 'San Juan del Sur';
+        origen_ciudad.nombre = ? AND destino_ciudad.nombre = ?`;
 
     db.all(sql, [origen, destino], (err, rows) => {
         if (err) {
@@ -53,7 +53,6 @@ app.get('/buscar', (req, res) => {
         res.json(rows);
     });
 });
-
 
 app.listen(PORT, () => {
     console.log(`El servidor está corriendo en http://localhost:${PORT}`);
