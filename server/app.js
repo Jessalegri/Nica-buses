@@ -24,26 +24,26 @@ app.get('/buscar', (req, res) => {
     const destino = req.query.destino;
 
     const sql = `
-        SELECT 
-            origen_terminal.terminal AS terminal_origen,
-            destino_terminal.terminal AS terminal_destino,
-            horario.hora_salida,
-            horario.duracion_de_viaje,
-            COALESCE(calif.calificacion, 'No calificado') AS calificacion
-        FROM 
-            HorariosDeBuses AS horario
-        JOIN 
-            Terminales AS origen_terminal ON horario.terminal_origen_id = origen_terminal.id
-        JOIN 
-            Terminales AS destino_terminal ON horario.terminal_destino_id = destino_terminal.id
-        JOIN 
-            Ciudades AS origen_ciudad ON origen_terminal.ciudad_id = origen_ciudad.id
-        JOIN 
-            Ciudades AS destino_ciudad ON destino_terminal.ciudad_id = destino_ciudad.id
-        LEFT JOIN 
-            Calificaciones AS calif ON horario.id = calif.horario_id
-        WHERE 
-            origen_ciudad.nombre = ? AND destino_ciudad.nombre = ?`;
+    SELECT 
+        origen_terminal.terminal AS terminal_origen,
+        destino_terminal.terminal AS terminal_destino,
+        horario.hora_salida,
+        horario.duracion_de_viaje,
+        COALESCE(calif.calificacion, 'No calificado') AS calificacion
+    FROM 
+        HorarioDeBuses AS horario
+    JOIN 
+        Terminales AS origen_terminal ON horario.terminal_origen_id = origen_terminal.id
+    JOIN 
+        Terminales AS destino_terminal ON horario.terminal_destino_id = destino_terminal.id
+    JOIN 
+        Ciudades AS origen_ciudad ON origen_terminal.ciudad_id = origen_ciudad.id
+    JOIN 
+        Ciudades AS destino_ciudad ON destino_terminal.ciudad_id = destino_ciudad.id
+    LEFT JOIN 
+        Calificaciones AS calif ON horario.id = calif.horario_id
+    WHERE 
+        origen_ciudad.nombre = ? AND destino_ciudad.nombre = ?`;
 
     db.all(sql, [origen, destino], (err, rows) => {
         if (err) {
