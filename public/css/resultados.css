@@ -1,0 +1,49 @@
+/* resultados.css */
+
+.resultado-container {
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    width: 80%;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ruta-bar {
+    background-color: #4CAF50; /* un color verde, pero puedes cambiarlo */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5em;
+    border-radius: 10px 10px 0 0; /* redondear solo las esquinas superiores */
+}
+
+.detalles-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.terminal {
+    flex: 1;
+    padding: 10px;
+}
+
+.origen {
+    text-align: left;
+}
+
+.destino {
+    text-align: right;
+}
+
+.horario {
+    flex: 1;
+    text-align: center;
+}
+
+span {
+    display: block;
+    margin-top: 10px;
+    color: grey;
+}
