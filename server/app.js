@@ -6,7 +6,7 @@ const app = express();
 const PORT = 3001;
 
 // Establecemos la conexión con la base de datos SQLite3
-const db = new sqlite3.Database('./nicabus.sql.db', (err) => {
+const db = new sqlite3.Database('.dataBase.db', (err) => {
     if (err) {
         // Si hay un error durante la conexión, se muestra
         console.error('Error conectando a la base de datos: ', err);
