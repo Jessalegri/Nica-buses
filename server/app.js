@@ -43,7 +43,7 @@ app.get('/buscar', (req, res) => {
     LEFT JOIN 
         Calificaciones AS calif ON horario.id = calif.horario_id
     WHERE 
-        origen_ciudad.nombre = ? AND destino_ciudad.nombre = ?`;
+        origen_ciudad.nombre = 'Managua' AND destino_ciudad.nombre = 'San Juan del Sur';
 
     db.all(sql, [origen, destino], (err, rows) => {
         if (err) {
