@@ -1,14 +1,18 @@
 // Configuracion inicial = express 
 const express = require('express');
 const sqlite3 = require('sqlite3');
+const path = require('path'); 
 
 const app = express();
 const PORT = 3001;
 
+// Configura EJS como motor de vistas
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 // Establecemos la conexión con la base de datos SQLite3
-const db = new sqlite3.Database('../dataBase.db', (err) => { // Ajusta la ruta
+const db = new sqlite3.Database('../dataBase.db', (err) => {
     if (err) {
-        // Si hay un error durante la conexión, se muestra
         console.error('Error conectando a la base de datos: ', err);
         return;
     }
@@ -18,7 +22,7 @@ const db = new sqlite3.Database('../dataBase.db', (err) => { // Ajusta la ruta
 // archivos estaticos desde carpeta 'public'    / conexion frontend * backend
 app.use(express.static('../public'));
 
-// configutacion de las rutas para 'query' consultas de la base de datos
+// Configuración de las rutas para 'query' consultas de la base de datos
 app.get('/buscar', (req, res) => {
     const origen = req.query.origen;
     const destino = req.query.destino;
@@ -50,11 +54,18 @@ app.get('/buscar', (req, res) => {
             res.status(500).json({ error: err.message });
             return;
         }
-        res.json(rows);
+
+        // Renderizar la vista 'resultados.ejs' y enviarla al cliente
+        res.render('resultados', {
+            origen: req.query.origen,
+            destino: req.query.destino,
+            resultados: rows
+        });
     });
 });
 
 app.listen(PORT, () => {
     console.log(`El servidor está corriendo en http://localhost:${PORT}`);
 });
+
 
