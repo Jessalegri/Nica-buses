@@ -10,7 +10,6 @@
 }
 
 .ruta-bar {
-    background-color: #4CAF50; /* un color verde, pero puedes cambiarlo */
     color: white;
     text-align: center;
     padding: 10px;
@@ -48,12 +47,12 @@ span {
     color: grey;
 }
 
-/* Estilo para las tarjetas en posiciones impares */
-.resultado-container:nth-child(odd) {
+/* Estilo para las barras de ruta en tarjetas impares */
+.resultado-container:nth-child(odd) .ruta-bar {
     background-color: #16B5F1; /* Color azul que proporcionaste */
 }
 
-/* Estilo para las tarjetas en posiciones pares */
-.resultado-container:nth-child(even) {
+/* Estilo para las barras de ruta en tarjetas pares */
+.resultado-container:nth-child(even) .ruta-bar {
     background-color: #9AAF37; /* Color verde que proporcionaste */
 }
