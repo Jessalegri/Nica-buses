@@ -54,5 +54,5 @@ span {
 
 /* Estilo para las barras de ruta en tarjetas pares */
 .resultado-container:nth-child(even) .ruta-bar {
-    background-color: #9AAF37; /* Color verde que proporcionaste */
+    background-color: #ff8c00; /* Color verde que proporcionaste */
 }
