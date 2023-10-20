@@ -47,3 +47,13 @@ span {
     margin-top: 10px;
     color: grey;
 }
+
+/* Estilo para las tarjetas en posiciones impares */
+.resultado-container:nth-child(odd) {
+    background-color: #16B5F1; /* Color azul que proporcionaste */
+}
+
+/* Estilo para las tarjetas en posiciones pares */
+.resultado-container:nth-child(even) {
+    background-color: #9AAF37; /* Color verde que proporcionaste */
+}
