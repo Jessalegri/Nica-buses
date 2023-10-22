@@ -1,4 +1,3 @@
-// Configuracion inicial = express 
 const express = require('express');
 const sqlite3 = require('sqlite3');
 const path = require('path'); 
@@ -10,6 +9,10 @@ const PORT = 3001;
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+// Middleware para manejar datos JSON y formularios
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // Establecemos la conexión con la base de datos SQLite3
 const db = new sqlite3.Database('../dataBase.db', (err) => {
     if (err) {
@@ -19,7 +22,7 @@ const db = new sqlite3.Database('../dataBase.db', (err) => {
     console.log('Conexión establecida con la base de datos.');
 });
 
-// archivos estaticos desde carpeta 'public'    / conexion frontend * backend
+// Archivos estáticos desde carpeta 'public'    / conexión frontend * backend
 app.use(express.static('../public'));
 
 // Función utilitaria para normalizar cadenas
@@ -29,8 +32,8 @@ function normalizeString(str) {
 
 // Configuración de las rutas para 'query' consultas de la base de datos
 app.get('/buscar', (req, res) => {
-    const origen = normalizeString(req.query.origen);
-    const destino = normalizeString(req.query.destino);
+    const origen = normalizeString(req.query.origen || "");  // Manejo por si no se proporciona origen
+    const destino = normalizeString(req.query.destino || "");  // Manejo por si no se proporciona destino
 
     const sql = `
     SELECT 
@@ -72,5 +75,6 @@ app.get('/buscar', (req, res) => {
 app.listen(PORT, () => {
     console.log(`El servidor está corriendo en http://localhost:${PORT}`);
 });
+
 
 
