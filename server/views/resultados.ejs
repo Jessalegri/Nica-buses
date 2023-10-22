@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados de NicaBus</title>
     <link rel="stylesheet" href="css/resultados.css">
-    <!-- Puedes incluir otras fuentes, estilos o recursos como se necesite -->
 </head>
 
 <body>
 
+<% if(resultados.length === 0) { %>
+    <div class="no-resultados">
+        No se encontraron horarios para la ruta <%= origen %> → <%= destino %>.
+    </div>
+<% } else { %>
     <% resultados.forEach((resultado) => { %>
         <div class="resultado-container">
             <div class="ruta-bar">
@@ -32,7 +36,9 @@
             </div>
         </div>
     <% }); %>
+<% } %>
 
 </body>
 </html>
+
 

@@ -1,6 +1,6 @@
 const express = require('express');
 const sqlite3 = require('sqlite3');
-const path = require('path'); 
+const path = require('path');
 
 const app = express();
 const PORT = 3001;
@@ -30,14 +30,11 @@ function normalizeString(str) {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 
-// Pruebas de la función normalizeString
-console.log(normalizeString("Estelí"));  // debería imprimir "esteli"
-console.log(normalizeString("León"));    // debería imprimir "leon"
-
-// Configuración de las rutas para 'query' consultas de la base de datos
 app.get('/buscar', (req, res) => {
-    const origen = normalizeString(req.query.origen || "");  // Manejo por si no se proporciona origen
-    const destino = normalizeString(req.query.destino || "");  // Manejo por si no se proporciona destino
+    const origen = normalizeString(req.query.origen || "");
+    const destino = normalizeString(req.query.destino || "");
+
+    console.log(`Origen procesado: ${origen}, Destino procesado: ${destino}`);
 
     const sql = `
     SELECT 
@@ -63,11 +60,13 @@ app.get('/buscar', (req, res) => {
 
     db.all(sql, [origen, destino], (err, rows) => {
         if (err) {
+            console.error("Error ejecutando la consulta:", err.message);
             res.status(500).json({ error: err.message });
             return;
         }
 
-        // Renderizar la vista 'resultados.ejs' y enviarla al cliente
+        console.log("Número de resultados obtenidos:", rows.length);
+
         res.render('resultados', {
             origen: req.query.origen,
             destino: req.query.destino,
@@ -79,5 +78,6 @@ app.get('/buscar', (req, res) => {
 app.listen(PORT, () => {
     console.log(`El servidor está corriendo en http://localhost:${PORT}`);
 });
+
 
 
