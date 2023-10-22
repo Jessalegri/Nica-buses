@@ -8,7 +8,7 @@ const PORT = 3001;
 // Configura EJS como motor de vistas
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-
+ 
 // Middleware para manejar datos JSON y formularios
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -27,8 +27,9 @@ app.use(express.static('../public'));
 
 // Configuración de las rutas para 'query' consultas de la base de datos
 app.get('/buscar', (req, res) => {
-    const origen = req.query.origen || "";
-    const destino = req.query.destino || "";
+    const origen = normalizeString(req.query.origen || "");
+    const destino = normalizeString(req.query.destino || "");
+
 
     const sql = `
     SELECT 
