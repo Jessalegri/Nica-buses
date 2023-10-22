@@ -6,39 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados de NicaBus</title>
     <link rel="stylesheet" href="css/resultados.css">
+    <!-- Puedes incluir otras fuentes, estilos o recursos como se necesite -->
 </head>
 
 <body>
 
-<% if(resultados.length === 0) { %>
-    <div class="no-resultados">
-        No se encontraron horarios para la ruta <%= origen %> → <%= destino %>.
-    </div>
-<% } else { %>
-    <% resultados.forEach((resultado) => { %>
-        <div class="resultado-container">
-            <div class="ruta-bar">
-                <%= origen %> → <%= destino %> 
-            </div>
-            <div class="detalles-container">
-                <div class="terminal origen">
-                    <%= resultado.terminal_origen %>
-                    <span><%= origen %></span>
-                </div>
-                <div class="horario">
-                    <%= resultado.hora_salida %> 
-                    <span>Duración: <%= resultado.duracion_de_viaje %></span>
-                </div>
-                <div class="terminal destino">
-                    <%= resultado.terminal_destino %>
-                    <span><%= destino %></span>
-                </div>
-            </div>
+    <% if (resultados.length === 0) { %>
+        <div class="no-resultados">
+            No se encontraron horarios para la ruta <%=origen %> → <%=destino %>.
         </div>
-    <% }); %>
-<% } %>
+    <% } else { %>
+        <% resultados.forEach((resultado) => { %>
+            <div class="resultado-container">
+                <div class="ruta-bar">
+                    <%=origen %> → <%=destino %> 
+                </div>
+                <div class="detalles-container">
+                    <div class="terminal origen">
+                        <%=resultado.terminal_origen %>
+                        <span><%=origen %></span>
+                    </div>
+                    <div class="horario">
+                        <%=resultado.hora_salida %> 
+                        <span>Duración: <%=resultado.duracion_de_viaje %></span>
+                    </div>
+                    <div class="terminal destino">
+                        <%=resultado.terminal_destino %>
+                        <span><%=destino %></span>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    <% } %>
 
 </body>
 </html>
+
 
 
