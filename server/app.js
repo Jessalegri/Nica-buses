@@ -25,6 +25,11 @@ const db = new sqlite3.Database('../dataBase.db', (err) => {
 // Archivos estáticos desde carpeta 'public'
 app.use(express.static('../public'));
 
+// Aquí agregamos la función
+function normalizeString(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
 // Configuración de las rutas para 'query' consultas de la base de datos
 app.get('/buscar', (req, res) => {
     const origen = normalizeString(req.query.origen || "");
