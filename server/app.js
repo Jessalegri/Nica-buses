@@ -30,6 +30,10 @@ function normalizeString(str) {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 
+// Pruebas de la función normalizeString
+console.log(normalizeString("Estelí"));  // debería imprimir "esteli"
+console.log(normalizeString("León"));    // debería imprimir "leon"
+
 // Configuración de las rutas para 'query' consultas de la base de datos
 app.get('/buscar', (req, res) => {
     const origen = normalizeString(req.query.origen || "");  // Manejo por si no se proporciona origen
@@ -75,6 +79,5 @@ app.get('/buscar', (req, res) => {
 app.listen(PORT, () => {
     console.log(`El servidor está corriendo en http://localhost:${PORT}`);
 });
-
 
 
