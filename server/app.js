@@ -1,6 +1,6 @@
 const express = require('express');
 const sqlite3 = require('sqlite3');
-const path = require('path');
+const path = require('path'); 
 
 const app = express();
 const PORT = 3001;
@@ -22,19 +22,13 @@ const db = new sqlite3.Database('../dataBase.db', (err) => {
     console.log('Conexión establecida con la base de datos.');
 });
 
-// Archivos estáticos desde carpeta 'public'    / conexión frontend * backend
+// Archivos estáticos desde carpeta 'public'
 app.use(express.static('../public'));
 
-// Función utilitaria para normalizar cadenas
-function normalizeString(str) {
-    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-}
-
+// Configuración de las rutas para 'query' consultas de la base de datos
 app.get('/buscar', (req, res) => {
-    const origen = normalizeString(req.query.origen || "");
-    const destino = normalizeString(req.query.destino || "");
-
-    console.log(`Origen procesado: ${origen}, Destino procesado: ${destino}`);
+    const origen = req.query.origen || "";
+    const destino = req.query.destino || "";
 
     const sql = `
     SELECT 
@@ -60,13 +54,11 @@ app.get('/buscar', (req, res) => {
 
     db.all(sql, [origen, destino], (err, rows) => {
         if (err) {
-            console.error("Error ejecutando la consulta:", err.message);
             res.status(500).json({ error: err.message });
             return;
         }
 
-        console.log("Número de resultados obtenidos:", rows.length);
-
+        // Renderizar la vista 'resultados.ejs' y enviarla al cliente
         res.render('resultados', {
             origen: req.query.origen,
             destino: req.query.destino,
@@ -78,6 +70,7 @@ app.get('/buscar', (req, res) => {
 app.listen(PORT, () => {
     console.log(`El servidor está corriendo en http://localhost:${PORT}`);
 });
+
 
 
 
