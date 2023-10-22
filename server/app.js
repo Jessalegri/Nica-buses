@@ -22,10 +22,15 @@ const db = new sqlite3.Database('../dataBase.db', (err) => {
 // archivos estaticos desde carpeta 'public'    / conexion frontend * backend
 app.use(express.static('../public'));
 
+// Función utilitaria para normalizar cadenas
+function normalizeString(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
 // Configuración de las rutas para 'query' consultas de la base de datos
 app.get('/buscar', (req, res) => {
-    const origen = req.query.origen;
-    const destino = req.query.destino;
+    const origen = normalizeString(req.query.origen);
+    const destino = normalizeString(req.query.destino);
 
     const sql = `
     SELECT 
