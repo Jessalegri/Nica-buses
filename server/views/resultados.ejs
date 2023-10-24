@@ -12,14 +12,14 @@
 <body>
 
     <% if (resultados.length === 0) { %>
-        <div class="no-resultados">
+        <div class="no-result"> <!-- Cambio realizado aquí -->
             No se encontraron horarios para la ruta <%= origen %> → <%= destino %>.
         </div>
     <% } else { %>
         <% resultados.forEach((resultado) => { %>
             <div class="resultado-container">
                 <div class="ruta-bar">
-                    <%= origen %> → <%=destino %> 
+                    <%=origen %> → <%=destino %> 
                 </div>
                 <div class="detalles-container">
                     <div class="terminal origen">
