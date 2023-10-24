@@ -56,7 +56,10 @@ app.get('/buscar', (req, res) => {
     LEFT JOIN 
         Calificaciones AS calif ON horario.id = calif.horario_id
     WHERE 
-        origen_ciudad.nombre = ? AND destino_ciudad.nombre = ?`;
+        LOWER(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(origen_ciudad.nombre, 'á', 'a'), 'é', 'e'), 'í', 'i'), 'ó', 'o'), 'ú', 'u')) = ? 
+    AND 
+        LOWER(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(destino_ciudad.nombre, 'á', 'a'), 'é', 'e'), 'í', 'i'), 'ó', 'o'), 'ú', 'u')) = ?`;
+
 
     db.all(sql, [origen, destino], (err, rows) => {
         if (err) {
