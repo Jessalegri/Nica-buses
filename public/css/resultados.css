@@ -71,3 +71,9 @@ span {
     color: #666;
     background-color: #f8f9fa;
 }
+/* Agrega estilos para la sección de calificaciones */
+.calificacion {
+    font-weight: bold; /* Hace que el texto de la calificación sea negrita */
+    color: #FF5733; /* Cambia el color del texto de la calificación a naranja */
+    margin-top: 10px; /* Añade un espacio superior para separar la calificación de otros detalles */
+}
