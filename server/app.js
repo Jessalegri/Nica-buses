@@ -76,6 +76,11 @@ app.get('/buscar', (req, res) => {
     });
 });
 
+// Ruta de "agregar-horario" con el servidor.
+app.get('/agregar-horario', (req, res) => {
+    res.sendFile(__dirname + '/public/agregar_horario.html');
+});
+
 app.listen(PORT, () => {
     console.log(`El servidor está corriendo en http://localhost:${PORT}`);
 });

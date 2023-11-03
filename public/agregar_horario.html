@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Nuevo Horario de Buses</title>
+    <link rel="stylesheet" href="agregar_horario.css"> <!-- Enlace al archivo de estilos específico -->
+</head>
+<body>
+    <div class="formulario-container">
+        <h2>Agregar Nuevo Horario de Buses</h2>
+        <form action="/agregar-horario" method="POST">
+            <div class="input-group">
+                <label for="terminal_origen">Terminal de Origen:</label>
+                <input type="text" id="terminal_origen" name="terminal_origen" required>
+            </div>
+            <div class="input-group">
+                <label for="terminal_destino">Terminal de Destino:</label>
+                <input type="text" id="terminal_destino" name="terminal_destino" required>
+            </div>
+            <div class="input-group">
+                <label for="hora_salida">Hora de Salida:</label>
+                <input type="text" id="hora_salida" name="hora_salida" required>
+            </div>
+            <div class="input-group">
+                <label for="duracion_viaje">Duración del Viaje:</label>
+                <input type="text" id="duracion_viaje" name="duracion_viaje" required>
+            </div>
+            <div class="button-container">
+                <button type="submit">Agregar Horario</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
