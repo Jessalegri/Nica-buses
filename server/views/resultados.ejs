@@ -34,32 +34,13 @@
                         <%=resultado.terminal_destino %>
                         <span><%=destino %></span>
                     </div>
-                    <div class="calificacion">
-                        Calificación: <%= mostrarCalificacion(resultado.calificacion) %> <!-- Agrega esta línea para mostrar la calificación -->
-                    </div>
                 </div>
             </div>
         <% }); %>
     <% } %>
 
-    <!-- Define la función mostrarCalificacion aquí -->
-    <script>
-        function mostrarCalificacion(calificacion) {
-            if (calificacion !== null) {
-                let estrellas = '';
-                for (let i = 0; i < calificacion; i++) {
-                    estrellas += '★';
-                }
-                return estrellas;
-            } else {
-                return 'No calificado';
-            }
-        }
-    </script>
-
 </body>
 </html>
-
 
 
 
