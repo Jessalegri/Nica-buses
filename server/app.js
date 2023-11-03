@@ -23,7 +23,7 @@ const db = new sqlite3.Database('../dataBase.db', (err) => {
 });
 
 // Archivos estáticos desde carpeta 'public'
-app.use(express.static('../public'));
+app.use(express.static('./public'));
 
 // Aquí agregamos la función
 function normalizeString(str) {
