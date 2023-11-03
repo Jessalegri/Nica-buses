@@ -77,8 +77,13 @@ app.get('/buscar', (req, res) => {
 });
 
 // Ruta de "agregar-horario" con el servidor.
-app.get('/agregar-horario', (req, res) => {
-    res.sendFile(__dirname + '/../public/agregar_horario.html');
+app.get('/horarios', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/horario.html'));
+});
+
+// Ruta para servir el archivo de estilos
+app.get('/horario.css', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/css/horario.css'));
 });
 
 app.listen(PORT, () => {
