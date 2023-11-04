@@ -40,4 +40,13 @@ input[type="text"] {
     border-radius: 5px;
 }
 
+/* Estilo para la sección "Agregar Nuevo Horario de Buses" */
+.agregar-horario-container {
+    background-color: #7b4d8b; /* Color de fondo similar al deseado */
+    border: 7px solid #d6c6ff; /* Borde similar al deseado */
+    border-radius: 10px; /* Redondear los bordes */
+    padding: 20px; /* Espaciado interno para mejor apariencia */
+    margin-bottom: 20px; /* Espacio inferior para separar de otros elementos */
+}
+
 
