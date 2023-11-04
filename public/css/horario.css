@@ -1,60 +1,16 @@
-/* Estilo para el contenedor principal de horarios */
-.resultado-container {
+/* Estilo para el contenedor principal del formulario */
+.formulario-container {
     font-family: Arial, sans-serif;
     margin: 20px auto;
     width: 80%;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Agrega espacio interno al contenedor */
+    background-color: #f8f9fa; /* Color de fondo */
 }
 
-/* Estilo para la barra de ruta */
-.ruta-bar {
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 1.5em;
-    border-radius: 10px 10px 0 0;
-    background-color: #7b4d8b; /* Cambia el color de la barra de ruta */
-}
-
-/* Estilo para el contenedor de detalles */
-.detalles-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-/* Estilo para el elemento de terminal */
-.terminal {
-    flex: 1;
-    padding: 10px;
-}
-
-/* Estilo para el elemento de origen */
-.origen {
-    text-align: left;
-}
-
-/* Estilo para el elemento de destino */
-.destino {
-    text-align: right;
-}
-
-/* Estilo para el elemento de horario */
-.horario {
-    flex: 1;
-    text-align: center;
-}
-
-/* Estilo para el elemento de span */
-span {
-    display: block;
-    margin-top: 10px;
-    color: grey;
-}
-
-/* Estilo para el botón "Agregar horario" */
+/* Estilo para el botón "Agregar Horario" */
 .agregar-btn {
     background-color: #7b4d8b;
     border: 7px solid #d6c6ff;
@@ -64,4 +20,24 @@ span {
     border-radius: 5px;
     margin-top: 20px; /* Añade espacio entre el botón y los otros elementos */
 }
+
+/* Alineación de los elementos del formulario */
+.input-group {
+    margin-bottom: 10px; /* Espacio entre los elementos del formulario */
+}
+
+/* Estilo para las etiquetas del formulario */
+label {
+    display: block;
+    font-weight: bold;
+}
+
+/* Estilo para los campos de entrada de texto */
+input[type="text"] {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 
