@@ -65,6 +65,10 @@ header{
     margin-bottom: 20px; /* Ajusta este valor según tus necesidades */
 }
 
+.n-service a {
+    color: black;
+}
+
 .menu{
     position: fixed;
     z-index: 10;

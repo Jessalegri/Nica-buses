@@ -1,47 +1,67 @@
-/* public/css/horarios.css */
-
-.formulario-container {
+/* Estilo para el contenedor principal de horarios */
+.resultado-container {
     font-family: Arial, sans-serif;
     margin: 20px auto;
     width: 80%;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la barra de ruta */
+.ruta-bar {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5em;
+    border-radius: 10px 10px 0 0;
+    background-color: #7b4d8b; /* Cambia el color de la barra de ruta */
+}
+
+/* Estilo para el contenedor de detalles */
+.detalles-container {
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
 }
 
-h2 {
+/* Estilo para el elemento de terminal */
+.terminal {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Estilo para el elemento de origen */
+.origen {
+    text-align: left;
+}
+
+/* Estilo para el elemento de destino */
+.destino {
+    text-align: right;
+}
+
+/* Estilo para el elemento de horario */
+.horario {
+    flex: 1;
     text-align: center;
 }
 
-.input-group {
-    margin-bottom: 20px;
-}
-
-label {
+/* Estilo para el elemento de span */
+span {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    margin-top: 10px;
+    color: grey;
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-button[type="submit"] {
-    background-color: #16B5F1;
+/* Estilo para el botón "Agregar horario" */
+.agregar-btn {
+    background-color: #7b4d8b;
+    border: 7px solid #d6c6ff;
     color: white;
     padding: 10px 20px;
-    border: none;
+    font-weight: bold;
     border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
+    margin-top: 20px; /* Añade espacio entre el botón y los otros elementos */
 }
 
-button[type="submit"]:hover {
-    background-color: #0E91D6;
-}
