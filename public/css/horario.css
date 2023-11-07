@@ -1,5 +1,3 @@
-/* horario.css */
-
 /* Estilo para el contenedor principal de horarios */
 .resultado-container {
     font-family: Arial, sans-serif;
@@ -8,7 +6,6 @@
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    background-color: #fff; /* Fondo blanco para el contenedor principal */
 }
 
 /* Estilo para la barra de ruta */
@@ -16,38 +13,52 @@
     color: white;
     text-align: center;
     padding: 10px;
-    font-size: 1.5em;
+    font-size: 1.2em; /* Reduce el tamaño del texto */
     border-radius: 10px 10px 0 0;
-    background-color: #7b4d8b; /* Color morado para la barra de ruta */
+    background-color: #7b4d8b;
 }
 
-/* Estilo para el contenedor del encabezado */
-.resaltado-container {
-    background-color: #7b4d8b; /* Color morado para el encabezado */
-    padding: 10px; /* Espaciado alrededor del encabezado */
+/* Estilo para el contenedor de detalles */
+.formulario-container {
+    padding: 20px; /* Añade un espacio interior */
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    gap: 10px; /* Añade espacio entre los elementos */
 }
 
-/* Estilo para el encabezado */
-.resaltado-header {
-    margin: 0; /* Elimina el margen superior del encabezado para alinear con la barra */
-    color: white; /* Cambia el color del texto a blanco para que sea legible en el fondo morado */
+/* Estilo para el encabezado h2 */
+.formulario-container h2 {
+    font-size: 1.2em; /* Reduce el tamaño del encabezado */
+    margin-bottom: 10px; /* Añade espacio inferior */
+    text-align: center; /* Centra el texto */
 }
 
-/* Estilo para el formulario y otros elementos */
-.formulario-container,
-.input-group,
-.button-container {
-    background-color: #fff; /* Fondo blanco para el formulario y otros elementos */
+/* Estilo para los cuadros de entrada de texto */
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: bold; /* Hace que las etiquetas sean negritas */
+}
+
+.input-group input {
+    padding: 10px; /* Añade espacio interior */
+    border: 1px solid #ccc; /* Añade un borde */
+    border-radius: 5px; /* Añade bordes redondeados */
+    font-size: 1em; /* Tamaño de fuente normal */
 }
 
 /* Estilo para el botón "Agregar horario" */
 .agregar-btn {
     background-color: #7b4d8b;
-    border: px solid #d6c6ff;
+    border: 1px solid #d6c6ff;
     color: white;
     padding: 10px 20px;
     font-weight: bold;
     border-radius: 5px;
-    margin-top: 20px; /* Añade espacio entre el botón y los otros elementos */
+    margin-top: 20px;
+    text-align: center; /* Centra el texto */
 }
 
