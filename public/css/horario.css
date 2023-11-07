@@ -1,3 +1,5 @@
+/* horario.css */
+
 /* Estilo para el contenedor principal de horarios */
 .resultado-container {
     font-family: Arial, sans-serif;
@@ -6,6 +8,7 @@
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Fondo blanco para el contenedor principal */
 }
 
 /* Estilo para la barra de ruta */
@@ -15,49 +18,32 @@
     padding: 10px;
     font-size: 1.5em;
     border-radius: 10px 10px 0 0;
-    background-color: #7b4d8b; /* Cambia el color de la barra de ruta */
+    background-color: #7b4d8b; /* Color morado para la barra de ruta */
 }
 
-/* Estilo para el contenedor de detalles */
-.detalles-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+/* Estilo para el contenedor del encabezado */
+.resaltado-container {
+    background-color: #7b4d8b; /* Color morado para el encabezado */
+    padding: 10px; /* Espaciado alrededor del encabezado */
 }
 
-/* Estilo para el elemento de terminal */
-.terminal {
-    flex: 1;
-    padding: 10px;
+/* Estilo para el encabezado */
+.resaltado-header {
+    margin: 0; /* Elimina el margen superior del encabezado para alinear con la barra */
+    color: white; /* Cambia el color del texto a blanco para que sea legible en el fondo morado */
 }
 
-/* Estilo para el elemento de origen */
-.origen {
-    text-align: left;
-}
-
-/* Estilo para el elemento de destino */
-.destino {
-    text-align: right;
-}
-
-/* Estilo para el elemento de horario */
-.horario {
-    flex: 1;
-    text-align: center;
-}
-
-/* Estilo para el elemento de span */
-span {
-    display: block;
-    margin-top: 10px;
-    color: grey;
+/* Estilo para el formulario y otros elementos */
+.formulario-container,
+.input-group,
+.button-container {
+    background-color: #fff; /* Fondo blanco para el formulario y otros elementos */
 }
 
 /* Estilo para el botón "Agregar horario" */
 .agregar-btn {
     background-color: #7b4d8b;
-    border: 5px solid #d6c6ff;
+    border: px solid #d6c6ff;
     color: white;
     padding: 10px 20px;
     font-weight: bold;

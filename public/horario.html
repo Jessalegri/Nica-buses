@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="css/horario.css">
 </head>
 <body>
-    <div class="agregar-horario-container">
-        <h2>Agregar Nuevo Horario de Buses</h2>
-        <form action="/agregar-horario" method="POST">
+    <div class="resultado-container">
+        <div class="ruta-bar">
+            <h2 class="resaltado-header">Agregar Nuevo Horario de Buses</h2>
+        </div>
+        <form action="/agregar-horario" method="POST" class="formulario-container">
             <div class="input-group">
                 <label for="terminal_origen">Terminal de Origen:</label>
                 <input type="text" id="terminal_origen" name="terminal_origen" required>
@@ -33,3 +35,4 @@
     </div>
 </body>
 </html>
+
