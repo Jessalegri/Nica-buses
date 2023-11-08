@@ -67,10 +67,6 @@
 }
 
 /* Estilo para el contenedor que envuelve al boton */
-.contenedor {
-    display: flex;
-    justify-content: center;    /* Centra horizontalmente */
-    align-items: center;        /* Centra verticalmente */
-    height: 100vh;              /* Ajusta altura*/
+.button-container {
+    text-align: center; /* Centra horizontalmente el contenido */
   }
-
