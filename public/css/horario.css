@@ -63,9 +63,14 @@
     font-weight: bold;
     font-size: 20px;
     border-radius: 10px;
-    margin-top: 20px;
     text-align: center;
-    align-self: center; /* Centra horizontalmente el botón */
 }
 
+/* Estilo para el contenedor que envuelve al boton */
+.contenedor {
+    display: flex;
+    justify-content: center;    /* Centra horizontalmente */
+    align-items: center;        /* Centra verticalmente */
+    height: 100vh;              /* Ajusta altura*/
+  }
 
