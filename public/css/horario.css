@@ -57,11 +57,11 @@
 /* Estilo para el botón "Agregar horario" */
 .agregar-btn {
     background-color: #7b4d8b;
-    border: 2px solid #d6c6ff; /* Aumenta el grosor del borde */
+    border: 5px solid #d6c6ff; /* Aumenta el grosor del borde */
     color: white;
     padding: 12px 30px; /* Aumenta el espacio interno */
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: 20px;
     text-align: center;
     align-self: center; /* Centra horizontalmente el botón */
