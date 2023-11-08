@@ -16,6 +16,7 @@
     font-size: 1.2em; /* Reduce el tamaño del texto */
     border-radius: 10px 10px 0 0;
     background-color: #7b4d8b;
+    border: 5px solid #d6c6ff; /* Aumenta el grosor del borde */
 }
 
 /* Estilo para el contenedor de detalles */
