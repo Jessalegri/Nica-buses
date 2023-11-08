@@ -9,23 +9,31 @@
 <body>
     <div class="resultado-container">
         <div class="ruta-bar">
-            <h2 class="resaltado-header">Agregar nuevo horario de Bus</h2>
+            <h2 class="resaltado-header">Agregar nuevo horario de bus</h2>
         </div>
         <form action="/agregar-horario" method="POST" class="formulario-container">
             <div class="input-group">
-                <label for="terminal_origen">Terminal de Origen:</label>
+                <label for="ciudad_origen">Ciudad de Origen:</label>
+                <input type="text" id="ciudad_origen" name="ciudad_origen" required>
+            </div>
+            <div class="input-group">
+                <label for="ciudad_destino">Ciudad de Destino:</label>
+                <input type="text" id="ciudad_destino" name="ciudad_destino" required>
+            </div>
+            <div class="input-group">
+                <label for="terminal_origen">Terminal de origen:</label>
                 <input type="text" id="terminal_origen" name="terminal_origen" required>
             </div>
             <div class="input-group">
-                <label for="terminal_destino">Terminal de Destino:</label>
+                <label for="terminal_destino">Terminal de destino:</label>
                 <input type="text" id="terminal_destino" name="terminal_destino" required>
             </div>
             <div class="input-group">
-                <label for="hora_salida">Hora de Salida:</label>
+                <label for="hora_salida">Hora de salida:</label>
                 <input type="text" id="hora_salida" name="hora_salida" required>
             </div>
             <div class="input-group">
-                <label for="duracion_viaje">Duración del Viaje:</label>
+                <label for="duracion_viaje">Duración del viaje:</label>
                 <input type="text" id="duracion_viaje" name="duracion_viaje" required>
             </div>
             <div class="button-container">
