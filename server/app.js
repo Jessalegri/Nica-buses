@@ -1,5 +1,5 @@
 const express = require('express');
-const sqlite3 = require('sqlite3');
+const sqlite3 = require('mysql');
 const path = require('path'); 
 
 const app = express();
@@ -13,13 +13,20 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Establecemos la conexión con la base de datos SQLite3
-const db = new sqlite3.Database('../dataBase.db', (err) => {
+// Establecemos la conexión con la base de datos MySQL
+const db = mysql.createConnection({
+    host: 'localhost', // Cambia esto por la dirección de tu servidor MySQL si es diferente
+    user: 'nicaBuses',
+    password: 'LeylaEliamJessica3',
+    database: 'nicaBuses'
+});
+
+db.connect((err) => {
     if (err) {
         console.error('Error conectando a la base de datos: ', err);
         return;
     }
-    console.log('Conexión establecida con la base de datos.');
+    console.log('Conexión establecida con la base de datos MySQL.');
 });
 
 // Archivos estáticos desde carpeta 'public'
