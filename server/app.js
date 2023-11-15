@@ -1,5 +1,5 @@
 const express = require('express');
-const sqlite3 = require('mysql');
+const mysql = require('mysql'); 
 const path = require('path'); 
 
 const app = express();
