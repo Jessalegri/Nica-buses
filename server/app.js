@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Establecemos la conexión con la base de datos MySQL
 const db = mysql.createConnection({
-    host: 'localhost', // Cambia esto por la dirección de tu servidor MySQL si es diferente
+    host: '127.0.0.1', // Cambia esto por la dirección de tu servidor MySQL si es diferente
     user: 'root',
     password: 'caramelo24',
     database: 'buses_horarios'
