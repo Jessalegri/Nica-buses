@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 const db = mysql.createConnection({
     host: 'localhost', // Cambia esto por la dirección de tu servidor MySQL si es diferente
     user: 'root',
-    password: 'LeylaEliamJessica3!',
+    password: 'caramelo24',
     database: 'buses_horarios'
 });
 
@@ -96,7 +96,5 @@ app.get('/horario.css', (req, res) => {
 app.listen(PORT, () => {
     console.log(`El servidor está corriendo en http://localhost:${PORT}`);
 });
-
-
 
 
