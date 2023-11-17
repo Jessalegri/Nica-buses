@@ -68,7 +68,7 @@ app.get('/buscar', (req, res) => {
         LOWER(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(destino_ciudad.nombre, 'á', 'a'), 'é', 'e'), 'í', 'i'), 'ó', 'o'), 'ú', 'u')) = ?`;
 
 
-    db.all(sql, [origen, destino], (err, rows) => {
+    db.query(sql, [origen, destino], (err, rows) => {
         if (err) {
             res.status(500).json({ error: err.message });
             return;
