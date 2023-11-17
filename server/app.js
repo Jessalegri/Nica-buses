@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 const db = mysql.createConnection({
     host: '127.0.0.1', // Cambia esto por la dirección de tu servidor MySQL si es diferente
     user: 'root',
-    password: 'caramelo24',
+    password: 'caramelo2410',
     database: 'buses_horarios'
 });
 
