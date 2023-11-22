@@ -165,7 +165,7 @@ app.post('/agregar-horario', (req, res) => {
                 res.status(500).send('Error al agregar el horario');
                 return;
             }
-            res.send('Horario agregado con éxito');
+            res.render('confirmacion');
         });
     })
     .catch(err => {
@@ -173,7 +173,6 @@ app.post('/agregar-horario', (req, res) => {
         res.status(500).send('Error al procesar la solicitud');
     });
 });
-
 
     // Codigo de inicio de servidor.
 app.listen(PORT, () => {
