@@ -101,8 +101,7 @@ app.post('/agregar-horario', (req, res) => {
     // Función para obtener el ID de un terminal basado en el nombre del terminal y la ciudad
     function obtenerTerminalId(nombreTerminal, nombreCiudad) {
         return new Promise((resolve, reject) => {
-            // Consulta SQL para encontrar el ID del terminal
-            const sql = `SELECT t.id FROM Terminales t JOIN Ciudades c ON t.ciudad_id = c.id WHERE t.nombre = ? AND c.nombre = ?`;
+            const sql = `SELECT t.id FROM Terminales t JOIN Ciudades c ON t.ciudad_id = c.id WHERE t.terminal = ? AND c.nombre = ?`;
             db.query(sql, [nombreTerminal, nombreCiudad], (err, rows) => {
                 if (err) {
                     reject(err);
