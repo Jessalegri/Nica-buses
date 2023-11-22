@@ -93,8 +93,58 @@ app.get('/horario.css', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/css/horario.css'));
 });
 
-app.listen(PORT, () => {
-    console.log(`El servidor está corriendo en http://localhost:${PORT}`);
+// Ruta POST para agregar nuevos horarios
+app.post('/agregar-horario', (req, res) => {
+    // Extraer los datos enviados desde el formulario
+    const { ciudad_origen, ciudad_destino, terminal_origen, terminal_destino, hora_salida, duracion_viaje } = req.body;
+
+    // Función para obtener el ID de un terminal basado en el nombre del terminal y la ciudad
+    function obtenerTerminalId(nombreTerminal, nombreCiudad) {
+        return new Promise((resolve, reject) => {
+            // Consulta SQL para encontrar el ID del terminal
+            const sql = `SELECT t.id FROM Terminales t JOIN Ciudades c ON t.ciudad_id = c.id WHERE t.nombre = ? AND c.nombre = ?`;
+            db.query(sql, [nombreTerminal, nombreCiudad], (err, rows) => {
+                if (err) {
+                    reject(err);
+                } else if (rows.length > 0) {
+                    resolve(rows[0].id);
+                } else {
+                    reject(new Error("No se encontró el terminal o la ciudad"));
+                }
+            });
+        });
+    }
+
+    // Usar Promise.all para obtener los IDs de los terminales de origen y destino
+    Promise.all([
+        obtenerTerminalId(terminal_origen, ciudad_origen),
+        obtenerTerminalId(terminal_destino, ciudad_destino)
+    ])
+    .then(ids => {
+        // Desestructurar los IDs obtenidos
+        const [terminalOrigenId, terminalDestinoId] = ids;
+
+        // Consulta SQL para insertar el nuevo horario en la base de datos
+        const sqlInsert = `INSERT INTO HorarioDeBuses (terminal_origen_id, terminal_destino_id, hora_salida, duracion_de_viaje) VALUES (?, ?, ?, ?)`;
+        db.query(sqlInsert, [terminalOrigenId, terminalDestinoId, hora_salida, duracion_viaje], (err, result) => {
+            if (err) {
+                console.error('Error al insertar en la base de datos: ', err);
+                res.status(500).send('Error al agregar el horario');
+                return;
+            }
+            // Enviar respuesta de éxito al cliente
+            res.send('Horario agregado con éxito');
+        });
+    })
+    .catch(err => {
+        // Manejar errores, por ejemplo, si no se encuentran los IDs de los terminales
+        console.error('Error al obtener los IDs de los terminales: ', err);
+        res.status(500).send('Error al procesar la solicitud');
+    });
 });
 
 
+    // Codigo de inicio de servidor.
+app.listen(PORT, () => {
+    console.log(`El servidor está corriendo en http://localhost:${PORT}`);
+});
