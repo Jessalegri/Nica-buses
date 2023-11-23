@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscar Terminales</title>
-    <link rel="stylesheet" href="css/terminales.css"></head>
+    <link rel="stylesheet" href="tu_estilo.css"> <!-- Asegúrate de enlazar tu hoja de estilos CSS -->
+</head>
 <body>
     <div class="buscar-terminal-container">
         <h1>Buscar Terminales por Ciudad</h1>
         <form id="buscar-terminal-form">
-            <label for="ciudad">Selecciona una ciudad:</label>
-            <select id="ciudad" name="ciudad">
-                <!-- Opciones de ciudades -->
-            </select>
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" required>
             <button type="submit">Buscar</button>
         </form>
         <div id="resultados-terminales">
             <!-- Los resultados se mostrarán aquí -->
         </div>
     </div>
-    <script src="js/buscarTerminales.js"></script> <!-- Asegúrate de tener este script -->
+    <script src="js/buscarTerminales.js"></script> <!-- Script para manejar la búsqueda -->
 </body>
 </html>
