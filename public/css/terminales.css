@@ -1,0 +1,60 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.buscar-terminal-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 500px;
+}
+
+.buscar-terminal-container h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.buscar-terminal-container form {
+    margin-bottom: 30px;
+}
+
+.buscar-terminal-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.buscar-terminal-container select, 
+.buscar-terminal-container button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.buscar-terminal-container button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.buscar-terminal-container button:hover {
+    background-color: #45a049;
+}
+
+#resultados-terminales p {
+    background-color: #e7e7e7;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

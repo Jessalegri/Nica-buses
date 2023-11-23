@@ -179,6 +179,48 @@ app.post('/agregar-horario', (req, res) => {
     });
 });
 
+// Ruta POST para encontrar terminales
+app.get('/terminales', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/terminales.html'));
+});
+
+app.post('/buscar-terminales', (req, res) => {
+    const ciudadSeleccionada = req.body.ciudad;
+
+    // Aquí, realiza una consulta a tu base de datos para encontrar terminales en la ciudad seleccionada
+    // Por ejemplo:
+    const sql = `SELECT * FROM Terminales WHERE ciudad_id = (SELECT id FROM Ciudades WHERE nombre = ?)`;
+    db.query(sql, [ciudadSeleccionada], (err, terminales) => {
+        if (err) {
+            console.error('Error al buscar terminales: ', err);
+            res.status(500).send('Error al realizar la búsqueda');
+            return;
+        }
+        res.json(terminales); // Envía los resultados como JSON
+    });
+});
+
+document.getElementById('buscar-terminal-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const ciudad = document.getElementById('ciudad').value;
+
+    fetch('/buscar-terminales', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ciudad: ciudad })
+    })
+    .then(response => response.json())
+    .then(terminales => {
+        const resultadosDiv = document.getElementById('resultados-terminales');
+        resultadosDiv.innerHTML = ''; // Limpiar resultados anteriores
+        terminales.forEach(terminal => {
+            resultadosDiv.innerHTML += `<p>${terminal.nombre}</p>`; // Ajusta según tu esquema de base de datos
+        });
+    });
+});
+
     // Codigo de inicio de servidor.
 app.listen(PORT, () => {
     console.log(`El servidor está corriendo en http://localhost:${PORT}`);
