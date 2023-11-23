@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-image: linear-gradient(to right, rgba(6, 44, 89, 0.4), rgba(67, 52, 109, 0.4), rgba(128, 60, 129, 0.4)), url('../img/bus.jpg');
+    background-image: linear-gradient(to right, rgba(6, 44, 89, 0.4), rgba(67, 52, 109, 0.4), rgba(128, 60, 129, 0.4)), url('/img/bus.jpg');
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
