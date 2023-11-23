@@ -140,6 +140,11 @@ function verificarOAgregarTerminal(nombreTerminal, ciudadId) {
     });
 }
 
+// Ruta de prueba para la vista de confirmación
+app.get('/test-confirmacion', (req, res) => {
+    res.render('confirmacion');
+});
+
 // Ruta POST para agregar nuevos horarios
 app.post('/agregar-horario', (req, res) => {
     const { ciudad_origen, ciudad_destino, terminal_origen, terminal_destino, hora_salida, duracion_viaje } = req.body;
