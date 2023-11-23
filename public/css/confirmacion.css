@@ -16,16 +16,16 @@ body {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 500px;
+    width: 400px;
 }
 
 .confirmacion h1 {
-    color: black;
-    margin-bottom: 30px;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .confirmacion p {
-    color: black;
+    color: #666;
     margin-bottom: 30px;
 }
 
@@ -42,15 +42,13 @@ body {
 }
 
 .confirmacion .agregar-horario-btn {
-    background-color: #ff8c00; 
-    border: 7px solid #ffdab9; 
+    background-color: #7b4d8b;
     color: white;
     margin-right: 10px;
 }
 
 .confirmacion .volver-inicio-btn {
-    background-color: #9AAF37;  
-    border: 7px solid #CEE2CA;  
+    background-color: #007bff;
     color: white;
     margin-left: 10px;
 }
