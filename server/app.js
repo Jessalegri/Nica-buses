@@ -186,11 +186,11 @@ app.get('/terminales', (req, res) => {
 
 // Ruta POST para buscar terminales
 app.post('/buscar-terminales', (req, res) => {
-    const ciudadSeleccionada = req.body.ciudad;
-    
-    const sql = `SELECT T.* FROM Terminales T 
-                 JOIN Ciudades C ON T.ciudad_id = C.id 
-                 WHERE LOWER(C.nombre) = LOWER(?)`;
+    const ciudadSeleccionada = req.body.ciudad.toLowerCase();
+
+    const sql = `SELECT Terminales.terminal FROM Terminales 
+                 JOIN Ciudades ON Terminales.ciudad_id = Ciudades.id 
+                 WHERE LOWER(Ciudades.nombre) = ?`;
 
     db.query(sql, [ciudadSeleccionada], (err, terminales) => {
         if (err) {
