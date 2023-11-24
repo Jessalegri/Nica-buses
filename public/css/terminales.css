@@ -1,7 +1,7 @@
 .buscar-terminal-container {
     text-align: center;
     padding: 20px;
-    background-color: #f4f4f4;                        /* Color de fondo */
+    background-color: #d6c6ff;                        /* Color de fondo */
     border-radius: 8px;                                 /*Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);         /* Sombra ligera */
     max-width: 400px;                                   /* Ancho del formulario */
