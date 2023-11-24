@@ -187,8 +187,11 @@ app.get('/terminales', (req, res) => {
 // Ruta POST para buscar terminales
 app.post('/buscar-terminales', (req, res) => {
     const ciudadSeleccionada = req.body.ciudad;
+    
+    const sql = `SELECT T.* FROM Terminales T 
+                 JOIN Ciudades C ON T.ciudad_id = C.id 
+                 WHERE LOWER(C.nombre) = LOWER(?)`;
 
-    const sql = `SELECT * FROM Terminales WHERE ciudad_id = (SELECT id FROM Ciudades WHERE nombre = ?)`;
     db.query(sql, [ciudadSeleccionada], (err, terminales) => {
         if (err) {
             console.error('Error al buscar terminales: ', err);
