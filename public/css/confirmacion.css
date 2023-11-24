@@ -1,54 +1,43 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-image: linear-gradient(to right, #062c59, #43346d, #803c81);
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.buscar-terminal-container {
+    background-color: #fff; /* Fondo blanco */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+    text-align: center; /* Texto centrado */
+    width: 500px; /* Ancho más grande pero controlado */
+    margin: 20px auto; /* Centrado horizontal y un poco de margen superior/inferior */
 }
 
-.confirmacion {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 400px;
+#buscar-terminal-form {
+    display: block; /* Hace que los elementos internos sean de bloque */
 }
 
-.confirmacion h1 {
-    color: #333;
-    margin-bottom: 20px;
+#buscar-terminal-form input,
+#buscar-terminal-form select {
+    width: calc(100% - 20px); /* Ancho completo con ajuste */
+    padding: 10px; /* Espaciado interno cómodo */
+    margin-bottom: 15px; /* Espaciado entre elementos */
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
 
-.confirmacion p {
-    color: #666;
-    margin-bottom: 30px;
+#resultados-terminales {
+    text-align: left; /* Alineación del texto a la izquierda */
+    padding-top: 20px; /* Espaciado en la parte superior para separar de los inputs */
+}
+#buscar-terminal-form button {
+    width: 100%; /* Ancho completo */
+    padding: 12px 0; /* Espaciado vertical */
+    font-size: 16px; /* Tamaño de fuente legible */
+    color: #fff; /* Texto blanco */
+    background-color: #007bff; /* Fondo azul */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo puntero */
+    transition: background-color 0.3s; /* Transición suave */
 }
 
-.confirmacion a {
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.confirmacion a:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
-}
-
-.confirmacion .agregar-horario-btn {
-    background-color: #007bff;
-    color: white;
-    margin-right: 10px;
-}
-
-.confirmacion .volver-inicio-btn {
-    background-color: #007bff;
-    color: white;
-    margin-left: 10px;
+#buscar-terminal-form button:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el ratón por encima */
 }
