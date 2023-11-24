@@ -1,7 +1,7 @@
 .buscar-terminal-container {
     text-align: center;
     padding: 20px;
-    background-color: #d6c6ff;                        /* Color de fondo */
+    background-color: #f4f4f4;                        /* Color de fondo */
     border-radius: 8px;                                 /*Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);         /* Sombra ligera */
     max-width: 400px;                                   /* Ancho del formulario */
@@ -32,20 +32,4 @@
     background-color: #fff; /* Fondo blanco para los resultados */
     border-radius: 4px; /* Bordes redondeados */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-}
-
-#buscar-terminal-form button {
-    width: 100%; /* Ancho completo */
-    padding: 15px 20px; /* Espaciado interno grande */
-    font-size: 16px; /* Tamaño de letra grande */
-    color: #fff; /* Texto blanco */
-    background-color: #007bff; /* Color de fondo (puedes cambiarlo) */
-    border: none; /* Sin borde */
-    border-radius: 4px; /* Bordes redondeados */
-    cursor: pointer; /* Cambiar el cursor al pasar por encima */
-    transition: background-color 0.3s; /* Transición suave para el hover */
-}
-
-#buscar-terminal-form button:hover {
-    background-color: #0056b3; /* Cambiar color al pasar el mouse por encima */
 }
