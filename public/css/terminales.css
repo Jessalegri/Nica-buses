@@ -5,7 +5,7 @@ body {
     min-height: 100vh; /* Altura mínima del 100% del viewport */
     margin: 0; /* Elimina los márgenes por defecto */
     padding: 0; /* Elimina el relleno por defecto */
-    background-image: linear-gradient(to right, #062c59, #43346d, #803c81); /* Fondo */
+    background-image: url('../img/c.granada.jpg');
     font-family: 'Arial', sans-serif;
 }
 
