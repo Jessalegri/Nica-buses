@@ -36,7 +36,6 @@ label {
     /* Resto de tus estilos... */
 }
 
-
 #buscar-terminal-form {
     margin-bottom: 30px;
     padding: 20px;
@@ -45,10 +44,13 @@ label {
 #resultados-terminales {
     margin-top: 20px;
     padding: 20px;
-    background-color: #f8f9fa; /* Fondo ligeramente gris para los resultados */
-    border-radius: 6px; /* Bordes redondeados suaves */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Sombra más suave */
-    color: #333; /* Color de texto más oscuro para mejor legibilidad */
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra suave para dar profundidad */
+    color: #333; /* Color de texto oscuro para mejor legibilidad */
+    font-size: 16px; /* Tamaño de fuente adecuado */
+    max-height: 300px; /* Altura máxima para evitar que sea demasiado grande */
+    overflow-y: auto; /* Permite desplazamiento si el contenido es muy largo */
 }
 
 #buscar-terminal-form input,
@@ -77,4 +79,22 @@ label {
 #buscar-terminal-form button:hover {
     background-color: #218838; /* Color más oscuro al pasar el mouse */
     transform: scale(1.05); /* Ligeramente más grande al pasar el mouse */
+}
+
+#resultados-terminales h2 {
+    color: #007bff; /* Color para los títulos de las terminales */
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#resultados-terminales p {
+    margin-bottom: 10px; /* Espaciado entre terminales */
+}
+
+#resultados-terminales .terminal {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa; /* Fondo ligeramente gris para cada terminal */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 4px; /* Bordes redondeados */
 }
