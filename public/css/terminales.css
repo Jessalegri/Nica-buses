@@ -1,51 +1,52 @@
 .buscar-terminal-container {
     text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4;                        /* Color de fondo */
-    border-radius: 8px;                                 /*Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);         /* Sombra ligera */
-    max-width: 400px;                                   /* Ancho del formulario */
-    margin: auto;                                       /* Centrar el formulario */
+    padding: 30px;
+    background-color: #ffffff; /* Color de fondo más claro */
+    border-radius: 10px; /* Bordes más redondeados */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    max-width: 500px; /* Ancho más amplio para dar más espacio */
+    margin: 40px auto; /* Más margen para centrar y dar espacio */
+    font-family: 'Arial', sans-serif; /* Fuente coherente con el resto del sitio */
 }
 
 #buscar-terminal-form {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding: 20px;
 }
 
 #resultados-terminales {
     margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f9fa; /* Fondo ligeramente gris para los resultados */
+    border-radius: 6px; /* Bordes redondeados suaves */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Sombra más suave */
+    color: #333; /* Color de texto más oscuro para mejor legibilidad */
 }
 
 #buscar-terminal-form input,
 #buscar-terminal-form select {
-    width: 100%;                                        /* Ancho completo */
-    padding: 10px;                                      /* Espaciado interno */
-    margin-bottom: 10px;                                /* Espaciado entre campos */
-    border: 1px solid #ccc;                           /* Borde */
-    border-radius: 4px;                                 /* Bordes redondeados */
-}
-
-#resultados-terminales {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #fff; /* Fondo blanco para los resultados */
-    border-radius: 4px; /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    width: 100%;
+    padding: 12px 15px; /* Aumentar el relleno para una mejor sensación */
+    margin-bottom: 15px;
+    border: 1px solid #ddd; /* Borde más suave */
+    border-radius: 6px; /* Bordes redondeados más suaves */
+    box-sizing: border-box; /* Para mantener el ancho correcto */
+    font-size: 16px; /* Tamaño de fuente más grande para mejor legibilidad */
 }
 
 #buscar-terminal-form button {
-    width: 100%; /* Ancho completo */
-    padding: 15px 20px; /* Espaciado interno grande */
-    font-size: 20px; /* Tamaño de letra grande */
-    color: #fff; /* Texto blanco */
-    background-color: #007bff; /* Color de fondo (puedes cambiarlo) */
-    border: none; /* Sin borde */
-    border-radius: 6px; /* Bordes redondeados */
-    cursor: pointer; /* Cambiar el cursor al pasar por encima */
-    transition: background-color 0.3s; /* Transición suave para el hover */
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 18px; /* Aumentar el tamaño de la fuente */
+    color: #fff;
+    background-color: #28a745; /* Color verde para el botón, se siente más amigable */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Agregar transformación al hover */
 }
 
 #buscar-terminal-form button:hover {
-    background-color: #0056b3; /* Cambiar color al pasar el mouse por encima */
+    background-color: #218838; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Ligeramente más grande al pasar el mouse */
 }
