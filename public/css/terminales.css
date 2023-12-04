@@ -1,13 +1,23 @@
-.buscar-terminal-container {
-    text-align: center;
-    padding: 30px;
-    background-color: #ffffff; /* Color de fondo más claro */
-    border-radius: 10px; /* Bordes más redondeados */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
-    max-width: 500px; /* Ancho más amplio para dar más espacio */
-    margin: 40px auto; /* Más margen para centrar y dar espacio */
-    font-family: 'Arial', sans-serif; /* Fuente coherente con el resto del sitio */
+body {
+    display: flex; /* Habilita Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    min-height: 100vh; /* Altura mínima del 100% del viewport */
+    margin: 0; /* Elimina los márgenes por defecto */
+    padding: 0; /* Elimina el relleno por defecto */
+    background-image: linear-gradient(to right, #062c59, #43346d, #803c81); /* Fondo */
+    font-family: 'Arial', sans-serif;
 }
+
+.buscar-terminal-container {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 500px; /* O el ancho que prefieras */
+    /* Resto de tus estilos... */
+}
+
 
 #buscar-terminal-form {
     margin-bottom: 30px;
