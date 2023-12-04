@@ -98,3 +98,32 @@ label {
     border: 1px solid #ddd; /* Borde sutil */
     border-radius: 4px; /* Bordes redondeados */
 }
+
+/* Responsitive - Dispositivos moviles */
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column; /* Cambia la dirección de Flexbox a vertical */
+        justify-content: flex-start; /* Alinea el contenido al inicio para evitar el centrado vertical */
+        padding: 20px; /* Agrega un poco de relleno para no pegarse a los bordes */
+        background-size: auto 100%; /* Ajusta el tamaño del fondo para dispositivos móviles */
+    }
+
+    .buscar-terminal-container {
+        width: 100%; /* Hace que el contenedor ocupe todo el ancho disponible */
+        max-width: none; /* Elimina el ancho máximo preestablecido */
+        padding: 20px; /* Reduce el relleno para más espacio */
+    }
+
+    h1 {
+        font-size: 24px; /* Reduce el tamaño de la fuente para encabezados */
+    }
+
+    label, #resultados-terminales, #buscar-terminal-form input, #buscar-terminal-form select, #buscar-terminal-form button {
+        font-size: 14px; /* Reduce el tamaño de la fuente para otros textos */
+    }
+
+    #resultados-terminales {
+        max-height: 200px; /* Reduce la altura máxima para la caja de resultados */
+    }
+}
