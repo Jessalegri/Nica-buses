@@ -6,6 +6,9 @@ body {
     margin: 0; /* Elimina los márgenes por defecto */
     padding: 0; /* Elimina el relleno por defecto */
     background-image: url('../img/leon.jpg');
+    background-size: cover; /* Asegura que la imagen cubra toda el área */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
     font-family: 'Arial', sans-serif;
 }
 
