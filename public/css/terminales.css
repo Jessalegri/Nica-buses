@@ -5,7 +5,7 @@ body {
     min-height: 100vh; /* Altura mínima del 100% del viewport */
     margin: 0; /* Elimina los márgenes por defecto */
     padding: 0; /* Elimina el relleno por defecto */
-    background-image: url('../img/c.granada.jpg');
+    background-image: url('../img/leon.jpg');
     font-family: 'Arial', sans-serif;
 }
 
