@@ -12,6 +12,21 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+h1 {
+    text-align: center; /* Centra el texto */
+    color: #333; /* Color del texto */
+    font-size: 24px; /* Tamaño de la fuente */
+    margin-bottom: 20px; /* Espacio debajo del encabezado */
+}
+
+label {
+    display: block; /* Hace que el label ocupe su propia línea */
+    text-align: center; /* Centra el texto */
+    margin-bottom: 10px; /* Espacio debajo del label */
+    color: #666; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
 .buscar-terminal-container {
     padding: 30px;
     background-color: #ffffff;
